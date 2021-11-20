@@ -52,7 +52,7 @@ public class CreateSearchQuery {
     }
 
     private static MongoCollection<Document> getQueryCollection(MongoDatabase db) {
-        return db.getCollection("Waitlist");
+        return db.getCollection("Queries");
     }
 
 
@@ -62,7 +62,7 @@ public class CreateSearchQuery {
         MongoDatabase mainClientDatabase = mainClient.getDatabase("Algo");
         MongoCollection<Document> collection = getQueryCollection(mainClientDatabase);
 
-        SearchQuery query = new SearchQuery("AAPLe");
+        SearchQuery query = new SearchQuery("AAPL");
         collection.insertOne(query.createQuery());
     }
 }

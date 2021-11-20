@@ -40,7 +40,7 @@ def __main__():
     mongo_toolbase = MongoDB(c="mongodb+srv://finn:sauber@cluster0.4gtm6.mongodb.net/test")
     mongo_toolbase.set_database("Algo")
 
-    col = mongo_toolbase.get_collection("Waitlist")
+    col = mongo_toolbase.get_collection("Queries")
 
     for entry in col.find():
         print(entry)
