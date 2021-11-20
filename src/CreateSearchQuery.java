@@ -62,7 +62,7 @@ public class CreateSearchQuery {
         MongoDatabase mainClientDatabase = mainClient.getDatabase("Algo");
         MongoCollection<Document> collection = getQueryCollection(mainClientDatabase);
 
-        SearchQuery query = new SearchQuery("AAPL");
+        SearchQuery query = new SearchQuery("AAPLe");
         collection.insertOne(query.createQuery());
     }
 }
